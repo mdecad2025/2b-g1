@@ -140,3 +140,54 @@
 <p><span>我現在將在模擬中添加一個球。該球將被建模為剛體，如下圖所示。我將使用 sphere</span><span>節點來定義我們球的幾何形狀。</span></p>
 <p><span><img alt="" height="248" src="/images/567.PNG" width="456"/></span></p>
 <p><span><strong>41323229心得</strong><span>: 這是課後練習老師上課講的內容目前進度到這裡，到這裡除了本來就會的繪圖技能，我還學會了webots的添加競技場、牆壁、障礙物和 e-puck 機器人等等，有助於模擬動態。</span></span></p>
+<h1>WH14</h1>
+<h2><span>CAD 套件中轉入WEBOTS<span> </span></span></h2>
+<p><span><span></span></span></p>
+<p><strong>目前成功做到匯入PROTO</strong></p>
+<p></p>
+<p>如何將機器人從SOLIDWRKS匯入WEBOTS且能模擬我所需要的動作。</p>
+<p><strong>第一階段：</strong>SolidWorks 匯出 URDF，在網路上下載外掛URDF，SolidWorks → 上方功能表 → 工具→ 新增外掛</p>
+<p>在SOLIDWORKS將關節處設置點座標，軸線。</p>
+<ul>
+<li data-end="588" data-start="567">
+<p data-end="588" data-start="570">按下 URDF 匯出工具</p>
+</li>
+<li data-end="664" data-start="589">
+<p data-end="599" data-start="592">設定項目包含：</p>
+<ul data-end="664" data-start="603">
+<li data-end="618" data-start="603">
+<p data-end="618" data-start="605">主體</p>
+</li>
+<li data-end="639" data-start="622">
+<p data-end="639" data-start="624">每個 Link 構成的零件</p>
+</li>
+<li data-end="664" data-start="643">
+<p data-end="664" data-start="645">各個 Joint（旋轉軸、移動軸）</p>
+</li>
+</ul>
+</li>
+<li data-end="725" data-start="665">
+<p data-end="674" data-start="668">每個關節需：</p>
+<ul data-end="725" data-start="678">
+<li data-end="690" data-start="678">
+<p data-end="690" data-start="680">設定 座標系</p>
+</li>
+<li data-end="706" data-start="694">
+<p data-end="706" data-start="696">設定 軸方向</p>
+</li>
+</ul>
+</li>
+</ul>
+<p></p>
+<p data-end="725" data-start="712">選擇此關節所包含的零件</p>
+<p>(要注意主配合和子配合要搭配好)</p>
+<p>完成後按「預覽與匯出」</p>
+<p><strong>第二階段：</strong>使用 urdf2webots 轉 PROTO，安裝 Python</p>
+<p>Python 路徑：C:\Users\SSAL\AppData\Local\Programs\Python\Python314\</p>
+<p>安裝 urdf2webots打開 CMD:"C:\Users\SSAL\AppData\Local\Programs\Python\Python314\python.exe" -m pip install urdf2webots</p>
+<p>將 URDF → PROTO:"C:\Users\SSAL\AppData\Local\Programs\Python\Python314\python.exe" -m urdf2webots.importer --input "C:\Duck\urdf\Duck.urdf" --output "C:\Duck\Duck.proto"</p>
+<p><strong>第三階段：</strong>設定 Webots 專案。Webots → File → New Project Directory</p>
+<p></p>
+<p>放入 PROTO + meshes重新載入世界Webots → File → Reload World</p>
+<p>加入機器人到場景Add → PROTO nodes →Webots Projects→Current Project</p>
+<p>加入Python</p>
