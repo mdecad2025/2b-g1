@@ -142,21 +142,10 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">照片和影片 << <a href='照片和影片.html'>Previous</a> <a href='連桿機構.html'>Next</a> >> 連桿機構<br /><h1>軟體選擇與分工和優缺點</h1>
-<p>此次課程我們選用SOLIDWORKS為主要設計軟體,NX為次要設計軟體,ONSHAPE的部分由於不熟悉,我們嘗試畫出一些零件,結果不盡人意,無法達到繪製如SOLIDWORKS和NX細緻,但我們還在嘗試使用ONSHAPE中。</p>
-<p>WH3團隊分工:29負責OPENDUCK,SOLIDWORKS零件繪製,零件組合和動畫展示和3D列印和切片，Webots模擬。</p>
-<p>             52和15負責OPENDUCK,NX零件繪製和組裝。52負責3D列印和切片。</p>
-<p>             34,45,51負責連桿機構零件繪製和零件組合,組合3D列印零件。</p>
-<p>(41323229 SolidWorks 優點:操作最直覺、學習最快 缺點:檔案是 本地儲存，容易有版本衝突，協作功能落後</p>
-<p>Onshape <span>優點:</span>雲端運作擁有多人協作、版本管理、分支 <span>缺點:</span>曲面、自由形狀功能不如 NX 和 SolidWorks</p>
-<p>NX <span>優點:CAD + CAM + CAE 一套完成擁有非常強的 <strong data-end="1156" data-start="1131">自由曲面)</strong></span></p>
-<p><span><strong data-end="1156" data-start="1131"></strong></span></p>
-<p>(41323245 在繪製五軸連桿機構中，使我們更了解連桿比例、角度設定與運動路徑之間的關係，我們能更清楚觀察機構的可動範圍、死點與可能的干涉問題，透過這次練習不僅提升了我們繪圖的技巧，也加深了我們對機構設計原理的理解。</p>
-<p>五軸連桿機構的設計與繪圖需要從需求與自由度分析開始，先確定輸入軸、輸出端與期望的運動形式，再建立整體的連桿配置。接著根據幾何關係進行向量環路計算或多位置圖解合成，求出各連桿長度與旋轉中心位置。</p>
-<p>完成概念設計後，利用 CAD 軟體繪製 2D 草圖並加入尺寸與角度拘束，再建立 3D 模型進行運動模擬與干涉檢查，透過反覆調整與驗證，可逐步完成一個動作平順且符合預期的五軸連桿機構設計。)</p>
-<p></p>
-<p></p>
-<br />照片和影片 << <a href='照片和影片.html'>Previous</a> <a href='連桿機構.html'>Next</a> >> 連桿機構</div>
+    <div id="tipue_search_content">課堂總結41323229-1 << <a href='課堂總結41323229-1.html'>Previous</a> <br /><h1>課堂總結41323229-2</h1>
+<p data-end="329" data-start="68">在 Webots 中完成三角形路徑控制，首先需建立一個 world 檔並加入機械手臂模型，確認關節與馬達名稱正確。接著在專案目錄下建立 controllers 資料夾，新增一個 Python controller，並在 Scene Tree 中將 Robot 的 controller 指定為該名稱，使 Webots 能正確執行程式。</p>
+<p data-end="329" data-start="68">程式撰寫時，先使用 Supervisor 類別取得模擬控制權與時間步階，並設定機械手臂的幾何參數與關節角度偏移。核心部分是逆向運動學（IK），透過幾何關係將末端目標座標轉換為各關節角度，確保機械手臂能到達指定位置。路徑部分則以數學方式產生正三角形三個頂點，並在每條邊上插入多個中間點，形成平滑的三角形路徑。同時利用 IndexedLineSet 在地板上繪製紅色線條，讓路徑在視覺上清楚可見。最後，程式依序讀取三角形路徑點，計算對應的關節角度並控制馬達轉動，使機械手臂末端沿著三角形邊逐點移動，成功完成從 Webots 建模到三角形路徑運動的整個流程。</p>
+<p data-end="329" data-start="68">這堂課學到如何在 Webots 中建立機器人模擬環境，並用 Python 撰寫 controller 來控制機械手臂。透過逆向運動學將目標位置轉換成關節角度，並利用數學方式規劃三角形路徑，讓機械手臂依路徑運動，實際體會理論與實作結合的過程</p><br />課堂總結41323229-1 << <a href='課堂總結41323229-1.html'>Previous</a> </div>
         
     <!-- footer -->
       <div class="container">
